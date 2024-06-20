@@ -13,7 +13,7 @@ let message =[
 ]
 
 server.listen(process.env.PORT || 8080,() => {
-    console.log('Server is running on port 8080');
+    console.log('Server is running on port 8080\nhttp://localhost:8080');
     }
 );
 
@@ -29,9 +29,9 @@ io.on('connection',function(socket) {
         message.push(data);
         io.sockets.emit('messages', message);
     })
-  /*  socket.on('disconnect', function() {
-        console.log('user disconnected');
-    })*/
+    socket.on('disconnect', function() {
+        console.log('Usuario Desconectado');
+    })
 })
 
 
