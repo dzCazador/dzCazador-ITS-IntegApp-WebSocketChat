@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>    
+    <title>Document</title>
+</head>
+<body>
+    <div id="messages">
+    </div>
+    Usuario:<input type="text" id="autor"/>
+    Texto:<input type="text" id="chat"/>
+    <button type="button" onclick="javascript:enviarMensaje(document.getElementById('autor').value,document.getElementById('chat').value)">Ingresar</button>
+</body>
+</html>
